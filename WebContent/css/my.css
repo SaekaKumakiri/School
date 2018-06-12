@@ -1,0 +1,80 @@
+h1 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+h2 {
+  font-family: "Hannari";
+}
+
+.header-color{
+  background-color: #87cefa;
+}
+
+.sel-main{
+ font-size: 500%;
+ position: relative;
+ top: 50%;
+ -webkit-transform: translateY(-50%);
+ transform: translateY(-50%);
+}
+
+.iro-main {
+ background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+}
+
+.login-size {
+  max-width:350px;
+}
+
+.menu-size{
+  max-width:250px;
+}
+
+.entrylist-font-size{
+  font-family: "Hannari";
+}
+
+.navbar-right {
+  text-align: right;
+}
+
+.spaceButton {
+  width: 80px;
+}
+
+.menu-btn {
+  font-family: "Hannari";
+}
+
+.listTable {
+  font-family: "Hannari";
+}
+
+.box18{
+    margin:2em 0;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+}
+.box18:before,.box18:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.box18:after {
+    top:-12px;
+    left:-12px;
+}
+.box18:before {
+    bottom:-12px;
+    right:-12px;
+}
+.box18 p {
+    margin: 0;
+    padding: 0;
+}
