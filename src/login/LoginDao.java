@@ -20,7 +20,7 @@ public class LoginDao {
 	public ResultSet findAll(String ID, String pw){
 		try {
 
-			String sql = "SELECT Staff_ID, Password, Staff_name FROM staff WHERE Staff_ID = ID AND Password = pw";
+			String sql = "SELECT Staff_ID, Password, Staff_name FROM staff WHERE Staff_ID = " + ID + " AND Password = " + pw + " AND Control_Flg = 1";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			rs = pStmt.executeQuery();
 

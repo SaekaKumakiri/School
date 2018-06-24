@@ -43,9 +43,10 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String staffID=request.getParameter("StaffID");
 		String password=request.getParameter("Password");
+		String staffName = null;
 		List<LoginBean> loginList = new ArrayList<LoginBean>();
 
-		if(staffID == null || password == null){
+		if(staffID.isEmpty() || password.isEmpty()){
 			request.setAttribute("error", "IDまたはパスワードが入力されていません");
 			RequestDispatcher disp = request.getRequestDispatcher("/jsp/login.jsp");
 			disp.forward(request,response);
@@ -59,6 +60,7 @@ public class LoginServlet extends HttpServlet {
 				if(loginList != null) {
 					request.setAttribute("StaffID",staffID);
 					request.setAttribute("Password", password);
+					request.setAttribute("StaffName",staffName);
 					RequestDispatcher disp = request.getRequestDispatcher("/jsp/menu.jsp");
 					disp.forward(request,response);
 				}else {
@@ -71,13 +73,6 @@ public class LoginServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 
-
-
-			//IDとパスワードが一致したときメニュー画面に移る
-			request.setAttribute("StaffID",staffID);
-			request.setAttribute("Password", password);
-			RequestDispatcher disp = request.getRequestDispatcher("/jsp/menu.jsp");
-			disp.forward(request,response);
 		}
 
 	}
